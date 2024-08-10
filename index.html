@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Kanji Generator</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      img {
+        max-width: 500px;
+        max-height: 500px;
+        margin-bottom: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="randomKanji" src="" alt="Random Kanji" />
+    <button id="generateButton">Generate Random Kanji</button>
+
+    <script>
+      const images = [
+        "https://upload.wikimedia.org/wikipedia/commons/e/ef/J_c189_e5d5.png?20171024085714",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/J_c18b_e5d7.png?20171024085423",
+      ];
+
+      const randomKanji = document.getElementById("randomKanji");
+      const generateButton = document.getElementById("generateButton");
+
+      generateButton.addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        randomKanji.src = images[randomIndex];
+      });
+    </script>
+  </body>
+</html>
