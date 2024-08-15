@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/styles.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Kanji Generator</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-      }
-      img {
-        max-width: 500px;
-        max-height: 500px;
-        margin-bottom: 20px;
-      }
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
-    <h1>Random Kanji</h1>
+    <h1>Random Kanji Generator</h1>
     <label id="name">Name:</label>
     <label id="definition"></label>
     <label id="Onyomi"></label>
     <label id="Kunyomi"></label>
-    <button id="generateButton">Generate Random Kanji</button>
-
+    <hr />
+      <button id="generateButton" type="button">Generate Random Kanji</button>
+    </div>
     <script>
       async function fetchKanji() {
         try {
