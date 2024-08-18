@@ -8,28 +8,42 @@
       rel="stylesheet"
     />
     <!-- Use ./ for relative paths -->
-    <link href="./styles.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Kanji Generator</title>
   </head>
   <body>
-    <h1>Random Kanji Generator</h1>
-    <label id="name">Name:</label>
-    <label id="definition"></label>
-    <label id="Onyomi"></label>
-    <label id="Kunyomi"></label>
-    <hr />
-      <button id="generateButton" type="button">Generate Random Kanji</button>
+    <div class="container">
+      <div class="box">
+        <ul>
+          <li><a href="/kanji_table.html">Kanji Table</a></li>
+          <li><a href="/form.html">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h1>Random Kanji Generator</h1>
+        <h2 id="name">Name:</h2>
+        <label id="definition"></label>
+        <br />
+        <label id="Onyomi"></label>
+        <br />
+        <label id="Kunyomi"></label>
+        <br>
+        <br />
+        <button id="generateButton" type="button">Generate Random Kanji</button>
+      </div>
     </div>
     <script>
       async function fetchKanji() {
         try {
+          //Loads data from file
           const response = await fetch("n5_kanji.json"); // Path to your JSON file
           if (!response.ok) {
-            throw new Error("Network response was not ok");
+            throw new Error("Network responchse was not ok");
           }
           const data = await response.json();
+          //Picks random kanji
           const randomKanji = data[Math.floor(Math.random() * data.length)];
           document.getElementById("name").innerText = randomKanji.Kanji;
           document.getElementById("definition").innerText = randomKanji.Meaning;

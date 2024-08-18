@@ -1,24 +1,39 @@
+.container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes space between the containers */
+}
+
+.box {
+  flex: 1; /* Each box takes up equal space */
+  margin: 10px; /* Adds space around each box */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: url("/imgs/beautiful-mount-fuji-picjumbo-com.jpg");
+  background-size: cover;
 }
 img {
   max-width: 500px;
   max-height: 500px;
   margin-bottom: 20px;
 }
+h2 {
+  font-size: 60px;
+  filter: drop-shadow(5px 5px 10px #8f9392);
+  margin-bottom: 20px;
+}
 button:hover {
   opacity: 1;
   transition: opacity 1s ease 0s;
-}
-#name {
-  font-size: 60px;
-  filter: drop-shadow(5px 5px 10px #b5b5b5);
-}
+
 #generateButton {
   appearance: none;
   background-color: #fafbfc;
@@ -282,4 +297,54 @@ a {
       animation: ani 0.7s steps(70) forwards;
     }
   }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+li a {
+  display: block;
+}
+table {
+  width: 100%; /* Full-width table */
+  border-collapse: collapse; /* Merge borders for a cleaner look */
+  margin: 25px 0;
+  font-size: 18px; /* Font size for the table text */
+  font-family: Arial, sans-serif; /* Use a clean, modern font */
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+th, td {
+  padding: 12px 15px; /* Padding inside each cell */
+  border-bottom: 1px solid #ddd; /* Subtle border for rows */
+}
+
+th {
+  background-color: #f4f4f4; /* Light background for headers */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Bold text for headers */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row color */
+}
+
+caption {
+  caption-side: bottom; /* Position caption below the table */
+  font-size: 14px; /* Smaller font size for the caption */
+  color: #777; /* Subtle caption color */
+  margin-top: 10px;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Add horizontal scroll for smaller screens */
 }
