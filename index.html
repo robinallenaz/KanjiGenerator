@@ -8,13 +8,14 @@
       rel="stylesheet"
     />
     <!-- Use ./ for relative paths -->
-    <link href="styles.css" rel="node_modules/bootstrap/dist/css">
+    <link href="styles.css" rel="node_modules/bootstrap/dist/css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Kanji Generator</title>
   </head>
   <body>
-    <div class="container alert alert-primary">
+    <!--Adding classes 'alert alert-primary' and role 'alert' to div-->
+    <div class="container alert alert-primary" role="alert">
       <div class="box">
         <ul>
           <li><a href="/kanji_table.html">Kanji Table</a></li>
@@ -34,6 +35,11 @@
         <button id="generateButton" type="button">Generate Random Kanji</button>
       </div>
     </div>
+    <!--Linking to jquery script below-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!--Linking to bootstrap bundle below-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!--Original script-->
     <script>
       var data = [];
       //Loads kanji and updates the display
