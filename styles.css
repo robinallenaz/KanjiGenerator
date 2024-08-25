@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
 .container {
   display: flex; /* Enables flexbox layout */
   justify-content: space-between; /* Distributes space between the containers */
@@ -74,9 +77,6 @@ button:hover {
   color: #959da5;
   cursor: default;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100");
 
 @mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
   background: $bcolor;
