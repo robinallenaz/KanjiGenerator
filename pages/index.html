@@ -12,7 +12,7 @@
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Kanji Generator</title>
@@ -22,8 +22,8 @@
     <div class="container alert alert-primary" role="alert">
       <div class="box container fluid">
         <ul>
-          <li><a href="/kanji_table.html">Kanji Table</a></li>
-          <li><a href="/form.html">Newsletter</a></li>
+          <li><a href="../pages/kanji_table.html">Kanji Table</a></li>
+          <li><a href="../pages/form.html">Newsletter</a></li>
         </ul>
       </div>
       <div class="box">
@@ -52,7 +52,7 @@
       async function fetchKanji() {
         try {
           //Loads data from file
-          const response = await fetch("n5_kanji.json");
+          const response = await fetch("../jsons/n5_kanji.json);
           if (!response.ok) {
             throw new Error("Network responchse was not ok");
           }
