@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Use ./ for relative paths -->
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Kanji Generator</title>
+  </head>
+  <body>
+    <!--Adding classes 'alert alert-primary' and role 'alert' to div-->
+    <div class="container alert alert-primary" role="alert">
+      <div class="box container fluid">
+        <ul>
+          <li><a href="/kanji_table.html">Kanji Table</a></li>
+          <li><a href="/form.html">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h1>Random Kanji Generator</h1>
+        <h2 id="name">Name:</h2>
+        <label id="definition"></label>
+        <br />
+        <label id="Onyomi"></label>
+        <br />
+        <label id="Kunyomi"></label>
+        <br />
+        <br />
+        <button class="btn btn-primary" id="generateButton" type="button">
+          Generate Random Kanji
+        </button>
+      </div>
+    </div>
+    <!--Linking to jquery script below-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!--Linking to bootstrap bundle below-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!--Original script-->
+    <script>
+      var data = [];
+      //Loads kanji and updates the display
+      async function fetchKanji() {
+        try {
+          //Loads data from file
+          const response = await fetch("n5_kanji.json");
+          if (!response.ok) {
+            throw new Error("Network responchse was not ok");
+          }
+          data = await response.json();
+          getRandomKanji();
+        } catch (error) {
+          console.error("Error fetching the JSON file:", error);
+        }
+      }
+      //Updates the display with a random kanji
+      function getRandomKanji() {
+        const randomKanji = data[Math.floor(Math.random() * data.length)];
+        document.getElementById("name").innerText = randomKanji.Kanji;
+        document.getElementById("definition").innerText = randomKanji.Meaning;
+        document.getElementById("Onyomi").innerText = randomKanji.Onyomi;
+        document.getElementById("Kunyomi").innerText = randomKanji.Kunyomi;
+      }
+
+      // Call the function to fetch kanji
+      fetchKanji();
+      generateButton.addEventListener("click", () => {
+        getRandomKanji();
+      });
+    </script>
+  </body>
+</html>
