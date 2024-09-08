@@ -33,8 +33,10 @@ img {
 h2 {
   font-size: 60px;
   filter: drop-shadow(5px 5px 10px #8f9392);
-  animation: myAnim .5s ease 0s 1 normal forwards;
   margin-bottom: 20px;
+}
+.animated_object {
+  animation: myAnim .5s ease 0s 1 normal forwards;
 }
 /* Animation for h2 */
 @keyframes myAnim {

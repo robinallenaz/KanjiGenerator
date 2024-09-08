@@ -7,7 +7,6 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Use ./ for relative paths -->
     <link
       href="../node_modules/bootstrap/dist/css/bootstrap-grid.css"
       rel="stylesheet"
@@ -54,7 +53,7 @@
           //Loads data from file
           const response = await fetch("../jsons/n5_kanji.json");
           if (!response.ok) {
-            throw new Error("Network responchse was not ok");
+            throw new Error("Network response was not okay");
           }
           data = await response.json();
           getRandomKanji();
@@ -69,6 +68,10 @@
         document.getElementById("definition").innerText = randomKanji.Meaning;
         document.getElementById("Onyomi").innerText = randomKanji.Onyomi;
         document.getElementById("Kunyomi").innerText = randomKanji.Kunyomi;
+        document.getElementById("name").classList.remove("animated_object");
+        setTimeout(function () {
+          document.getElementById("name").classList.add("animated_object");
+        }, 1);
       }
 
       // Call the function to fetch kanji
