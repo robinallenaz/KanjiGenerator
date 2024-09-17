@@ -98,28 +98,10 @@ button:hover {
 
 .footer {
   text-align: center;
-  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 20px;
   margin-top: 15vh;
 }
-
-.button-container-1 {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6vh;
-  overflow: hidden;
-  border: 1px solid;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  transition: 0.5s;
-  letter-spacing: 1px;
-  border-radius: 8px;
-
   button {
     width: 101%;
     height: 100%;
@@ -257,21 +239,6 @@ a {
   color: #00ff95;
 }
 
-.button-container-3 {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8vh;
-  overflow: hidden;
-  border: 1px solid #000;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  transition: 0.5s;
-  letter-spacing: 1px;
-  border-radius: 8px;
-
   button {
     width: 101%;
     height: 100%;
@@ -344,8 +311,4 @@ caption {
   font-size: 14px; /* Smaller font size for the caption */
   color: #777; /* Subtle caption color */
   margin-top: 10px;
-}
-
-.table-wrapper {
-  overflow-x: auto; /* Add horizontal scroll for smaller screens */
 }
