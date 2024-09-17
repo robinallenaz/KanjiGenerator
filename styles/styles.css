@@ -1,20 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100");
 
-.container {
-  display: flex; /* Enables flexbox layout */
-  justify-content: space-between; /* Distributes space between the containers */
-}
-
-.box {
-  flex: 1; /* Each box takes up equal space */
-  margin: 10px; /* Adds space around each box */
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  text-align: center;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
+label {
+  color: black;
 }
 
 body {
@@ -22,18 +10,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("/imgs/beautiful-mount-fuji-picjumbo-com.jpg");
-  background-size: cover;
 }
-img {
-  max-width: 500px;
-  max-height: 500px;
-  margin-bottom: 20px;
-}
+
 h2 {
   font-size: 60px;
   filter: drop-shadow(5px 5px 10px #8f9392);
-  margin-bottom: 20px;
+  color: black;
 }
 .animated_object {
   animation: myAnim .5s ease 0s 1 normal forwards;
