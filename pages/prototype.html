@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../styles/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>t</title>
+    <link rel="stylesheet" href="../styles/proto.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,35 +16,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Kanji Generator</title>
   </head>
   <body>
-    <!--Adding classes 'alert alert-primary' and role 'alert' to div-->
-    <div class="container alert alert-primary" role="alert">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <h1>Random Kanji Generator</h1>
-              <h2 id="name">Name:</h2>
-              <label id="definition"></label>
-              <br />
-              <label id="Onyomi"></label>
-              <br />
-              <label id="Kunyomi"></label>
-              <br />
-              <br />
-            </div>
-            <div class="flip-card-back"></div>
-          </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Random Kanji Generator</h1>
+          <h2 id="name">Name:</h2>
+          <label id="definition"></label>
+          <br />
+          <label id="Onyomi"></label>
+          <br />
+          <label id="Kunyomi"></label>
         </div>
-        <button class="btn btn-primary" id="generateButton" type="button">
-          Generate Random Kanji
-        </button>
+        <div class="flip-card-back"></div>
       </div>
     </div>
-    <!--Linking to jquery script below-->
+    <button class="btn btn-primary" id="generateButton" type="button">
+      Generate Random Kanji
+    </button>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <!--Linking to bootstrap bundle below-->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
